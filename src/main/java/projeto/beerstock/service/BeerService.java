@@ -69,7 +69,7 @@ public class BeerService {
             Beer incrementedBeerStock = beerRepository.save(beerToIncrementStock);
             return beerMapper.toDTO(incrementedBeerStock);
         }
-        
+
         throw new BeerStockExceededException(id, quantityToIncrement);
     }
 }
